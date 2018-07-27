@@ -1,0 +1,700 @@
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+/*table of content*/
+
+/* ==============================================
+1.Nav
+2.slider
+3.about-us
+4.whatwedo
+5.subscribe
+6.pricing-table
+7.video
+8.program
+9.staf
+10.contact-section
+11.Footer
+ ============================================== */
+
+/*table of content*/
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+body {
+    background: #000;
+    color: #fff;
+}
+
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.navbar-nav .nav-link.active {
+    background: #f00 !important;
+}
+
+
+
+header {}
+
+section {}
+
+
+
+/*Responsive*/
+
+@media (min-width: 992px) {
+    header {}
+}
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+    /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    -webkit-clip-path: none;
+    clip-path: none;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+//1.Nav bar
+#mainNav {
+    a {
+        font-family: 'Rajdhani', sans-serif;
+    }
+
+}
+
+/* ==========================================================================
+  2. slider
+   ========================================================================== */
+
+#slider {
+    .item {
+        // height: 800px;
+        // overflow: hidden;
+        img {
+            height: auto;
+        }
+    }
+}
+
+/* ==========================================================================
+  3. About Us
+   ========================================================================== */
+
+#about-us {
+    padding: 50px 0px;
+    .title {
+        margin-bottom: 50px;
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            font-family: 'Rajdhani', sans-serif;
+        }
+    }
+    .left {
+        .img-content {
+            img {
+                height: 500px;
+                width: 100%;
+            }
+        }
+    }
+    .right {
+        .txt-content {
+            p {
+                font-family: 'Raleway', sans-serif;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+  4. what-we-do
+   ========================================================================== */
+
+#whatwedo {
+    padding: 50px 0px;
+    .title {
+        margin-bottom: 50px;
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            font-family: 'Rajdhani', sans-serif;
+        }
+    }
+    .content {
+        .item {
+            .icon {
+                width: 75px;
+                height: 75px;
+                background: #ff3d00;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 80px;
+                margin: 0px auto 15px;
+                img {}
+            }
+            p {
+                text-align: center;
+            }
+            h3 {
+                font-size: 18px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+/* ==========================================================================
+  5. subscribe
+   ========================================================================== */
+
+#subscribe {
+    min-height: 250px;
+    background: #e7e6e6;
+    background-image: url(../img/slide14.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    padding: 50px 0px;
+    .title {
+        margin-bottom: 50px;
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            font-family: 'Rajdhani', sans-serif;
+            color: #fff;
+        }
+    }
+    .subscribe {
+        button {
+            color: #fff;
+        }
+    }
+}
+
+/* ==========================================================================
+  6. Pricing
+   ========================================================================== */
+
+#pricing-table {
+    padding: 50px 0px;
+    .title {
+        margin-bottom: 50px;
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            font-family: 'Rajdhani', sans-serif;
+        }
+    }
+    .content {
+        .item {
+            background: #fff;
+            color: #000;
+            transition: all 0.5s ease;
+            &:hover {
+                margin-top: -25px;
+            }
+            .c-title {
+                background: #D55400;
+                h3 {
+                    text-align: center;
+                    color: #fff;
+                    padding: 9px 0px;
+                }
+            }
+            .c-body {
+                ul {
+                    list-style: none;
+                    padding: 0px;
+                    li {
+                        text-align: center;
+                        padding: 4px 0px;
+                    }
+                }
+            }
+            .c-footer {
+                padding-bottom: 25px;
+                a.readmore {
+                    text-decoration: none;
+                    background: #FF3D00;
+                    color: #fff;
+                    display: block;
+                    text-align: center;
+                    padding: 7px 5px;
+                    margin: 0px auto;
+                    width: 150px;
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+  7. Choose us section
+   ========================================================================== */
+
+#why-choose-us {
+    padding: 50px 0px;
+    .img-content {
+        img {
+            width: 100%;
+            height: 400px;
+        }
+    }
+    .content {
+        h2 {
+            font-weight: 400;
+            margin-bottom: 15px;
+            font-family: 'Rajdhani', sans-serif;
+        }
+        p {}
+        .content-bottom {
+            margin-top: 40px;
+            .item {
+                .icon {
+                    width: 75px;
+                    height: 75px;
+                    background: #ff3d00;
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height: 80px;
+                    margin: 0px auto 15px;
+                }
+                h3 {
+                    font-size: 18px;
+                    text-align: center;
+                }
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+}
+
+/* ==========================================================================
+  8. Video section
+   ========================================================================== */
+
+#video {
+    padding: 50px 0px;
+    .title {
+        margin-bottom: 50px;
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            font-family: 'Rajdhani', sans-serif;
+        }
+    }
+    .left {
+        .txt-content {
+            p {}
+        }
+    }
+    .right {
+        .video-content {
+            iframe {
+                height: 480px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+  9. Program section
+   ========================================================================== */
+
+#program {
+    padding: 50px 0px;
+    .title {
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            font-family: 'Rajdhani', sans-serif;
+        }
+    }
+    .content {
+        margin-top: 50px;
+        .item {
+            min-height: 350px;
+            background: #ff3d00;
+            padding: 20px 0px;
+            border-bottom: 5px solid maroon;
+            .name {
+                h3 {
+                    text-align: center;
+                    color: #fff;
+                    margin-bottom: 8px;
+                    font-size: 18px;
+                }
+            }
+            .logo {
+                width: 100px;
+                margin: 0px auto;
+                margin-bottom: 8px;
+                border-radius: 50%;
+                img {
+                    border-radius: 50%;
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+            .desc {
+                ul {
+                    list-style: none;
+                    padding: 0px;
+                    li {
+                        text-align: center;
+                        color: #fff;
+                        a {
+                            color: #fff;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/* ==========================================================================
+  10. Staf section
+   ========================================================================== */
+
+#staf {
+    .title {
+        margin-bottom: 50px;
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            font-family: 'Rajdhani', sans-serif;
+        }
+    }
+    .content {
+        .item {
+            .img-content {
+                img {}
+            }
+            .name {
+                margin: 25px 0px;
+                h4 {
+                    text-align: center;
+                    text-transform: uppercase;
+                }
+            }
+            .desc {
+                p {
+                    text-align: center;
+                }
+            }
+            .social-icon {
+                ul {
+                    list-style: none;
+                    li {
+                        float: left;
+                        a {
+                            i.fab {
+                                height: 40px;
+                                width: 40px;
+                                text-align: center;
+                                line-height: 40px;
+                                color: #fff;
+                                margin-left: 7px;
+                                transition: all 0.3s linear;
+                            }
+                            i.fa-facebook {
+                                background: #3B5999;
+                            }
+                            i.fa-twitter {
+                                background: #55acee;
+                            }
+                            i.fa-pinterest {
+                                background: #bd081c;
+                            }
+                            i.fa-instagram {
+                                background: #e4405f;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+11. Contact Us
+   ========================================================================== */
+
+#contact-section {
+    padding: 50px 0px;
+    .title {
+        margin-bottom: 50px;
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            font-family: 'Rajdhani', sans-serif;
+        }
+    }
+    .left {
+        .contact-map {
+            iframe {}
+        }
+    }
+    .right {}
+}
